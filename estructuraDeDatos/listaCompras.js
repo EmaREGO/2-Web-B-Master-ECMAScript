@@ -1,3 +1,4 @@
+// Proyecto Estructuras de Datos
 // Crea un arreglo vacío llamado listaDeCompras.
 const listaDeCompras = []; 
 
@@ -10,6 +11,7 @@ export const agregarProducto = (producto) => {
     listaDeCompras.push(producto.toLowerCase());
     console.log(`"${producto}" agregado.`);
 };
+
 // Implementa una función eliminarProducto(producto) que elimine un producto de la lista.
 export const eliminarProducto = (producto) => {
     const indice = listaDeCompras.indexOf(producto.toLowerCase());
@@ -18,7 +20,7 @@ export const eliminarProducto = (producto) => {
         listaDeCompras.splice(indice, 1);
         console.log(`"${producto}" eliminado.`);
     } else {
-        console.log(`❌ No se encontró "${producto}" en la lista.`);
+        console.log(`No se encontró "${producto}" en la lista.`);
     }
 };
 
