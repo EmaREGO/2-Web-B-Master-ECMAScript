@@ -14,7 +14,7 @@ const resultado  = productos
 // Sort
 .sort((a,b) => a.nombre.localeCompare(b.nombre)) //localeComare compara strings correctamente y ordenamos alfabeticamente
 // Map
-//.map(producto => producto.nombre) // Devuelve solo el nombre del producto
+.map(producto => producto.nombre) // Devuelve solo el nombre del producto
 
 console.log('Resultados de usar los metodos Filter, Sort y Map')
 console.log(resultado)
