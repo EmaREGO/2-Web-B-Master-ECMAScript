@@ -1,22 +1,26 @@
-const invitados = ["Ana", "Carlos", "Cecilia", "Daniel", "Diana", "Eduardo"];
+const invitados = ["Ana", "Carlos", "Cecilia", "Daniel", "Diana", "Eduardo", "Paco", "Pedro", "Dilan"];
 
 function encontrarPareja(arr) {
 
     let inicio = 0;
     let siguiente = 1;
 
-    while (siguiente < arr.length) {
+    let limpio = [];
+    while (siguiente < arr.length) {   
         //Compara las iniciales de los nombres en los punteros
         //Si coinciden devuelven el par
-        if(arr[inicio].charAt(0).toLowerCase() === arr[siguiente].charAt(0).toLowerCase()){
-            return [arr[inicio], arr[siguiente]];
+        if (arr[inicio] && arr[inicio].length > 0 && arr[siguiente] && arr[siguiente].length > 0 ){
+            if(arr[inicio].charAt(0).toLowerCase() === arr[siguiente].charAt(0).toLowerCase()){
+            limpio.push([arr[inicio], arr[siguiente]]);
+            }
+        //Avanza los punteros si no coinciden
         }
         inicio++
         siguiente++
-        //Avanza los punteros si no coinciden
+        
     }
 
-    return null; //Si no encuentra ningun par
+    return limpio; //Si no encuentra ningun par
 }
 
 console.log(encontrarPareja(invitados));
