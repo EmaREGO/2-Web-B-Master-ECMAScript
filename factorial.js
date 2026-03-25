@@ -1,0 +1,32 @@
+function factorial(n) {
+    //Validacion de numeros negativos opcional
+    console.log('Calculando factorial de', n)
+    if (n < 0){
+        throw new Error('El factorial no esta definido para numeros negativos.')
+    }
+    
+    //Caso base
+    // 0! = 1
+    if(n === 0){
+        console.log('Caso base: factorial(0) = 1');
+        return 1; //1 - true
+    }
+    const resultado = n * factorial (n -1);
+    console.log(`Retornando ${resultado} para n = ${n}`)
+
+    //Llamada recursiva
+    // n! = n *(n-1)!
+    return n * factorial(n-1);
+}
+
+console.log(factorial(5));
+
+/*
+factorial(5)
+= 5 * factorial(4)
+= 5 * 4 * factorial(3)
+= 5 * 4 * 3 * factorial(2)
+= 5 * 4 * 3 * 2 * factorial(1)
+= 5 * 4 * 3 * 2 * 1 * factorial(0)
+= 5 * 4 * 3 * 2 * 1 * 1
+= 120 */
